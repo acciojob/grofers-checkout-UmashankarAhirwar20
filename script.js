@@ -12,14 +12,16 @@ const getSum = () => {
 	});
 
 	const table = document.querySelector("table");
-    const newRow = document.createElement("tr");
-    const totalCell = document.createElement("td");
+    const tr = document.createElement("tr");
+  const td = document.createElement("td");
 
-    totalCell.colSpan = 2;
-    totalCell.textContent = `Total Price = Rs ${totalValue}`;
+  td.id = "ans";    
+  td.colSpan = 2;      
+  td.textContent = totalValue;
 
-    newRow.appendChild(totalCell);
-    table.appendChild(newRow);
+  tr.appendChild(td);
+  table.appendChild(tr);
+
   
 };
 
